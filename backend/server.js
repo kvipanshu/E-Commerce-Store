@@ -2,7 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
-import cors from "cors";
 
 import authRoutes from "./routes/auth.route.js";
 import productRoutes from "./routes/product.route.js";
@@ -20,13 +19,6 @@ const PORT = process.env.PORT;
 
 const __dirname = path.resolve();
 
-app.use(
-	cors({
-		origin: ["https://e-commerce-store-5ezz.vercel.app"],
-		methods: ["POST", "GET"],
-		credentials: true,
-	})
-);
 app.use(express.json({ limit: "10mb" })); //allows you to parse the body of the request
 app.use(cookieParser());
 
