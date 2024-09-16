@@ -19,7 +19,6 @@ import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 function App() {
 	const { user, checkAuth, checkingAuth } = useUserStore();
 	const { getCartItems } = useCartStore();
-	axios.defaults.withCredentials = true;
 	useEffect(() => {
 		checkAuth();
 	}, [checkAuth]);
