@@ -22,7 +22,7 @@ const __dirname = path.resolve();
 
 app.use(
 	cors({
-		origin: [""],
+		origin: ["https://e-commerce-store-5ezz.vercel.app"],
 		methods: ["POST", "GET"],
 		credentials: true,
 	})
